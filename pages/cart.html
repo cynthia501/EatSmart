@@ -104,6 +104,10 @@
     .checkout-btn:hover {
       background: #d9a25c;
     }
+    button a{
+      text-decoration: none;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -143,11 +147,19 @@
         <strong>Total</strong>
         <span id="total-amount">$0.00</span>
       </div>
-      <button class="checkout-btn">Proceed to Checkout</button>
+      <button onclick="payment()" class="checkout-btn"><a href="paid.html">Proceed to Checkout</a></button>
     </div>
   </div>
 
   <script src="../cart.js"></script>
+
   <script src="../script.js"></script>
+
+  <script>
+    function payment(){
+      console.log("clicked")
+    }
+  </script>
+
 </body>
 </html>

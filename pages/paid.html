@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Placed</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+  body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container i {
+  font-size: 80px;
+  color: #28a745; 
+}
+
+.container h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+  </style>
+</head>
+<body>
+   <header>
+    <h1><a href="../index.html">EatSmart</a></h1>
+
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <nav class="desktop-nav">
+      <a href="../contact.html">Contact</a>
+      <a href="cart.html" class="cart-link">
+        Cart <span id="cart-count" class="cart-count">0</span>
+      </a>
+      <button onclick="window.location.href='pages/login.html'">Login</button>
+    </nav>
+
+    <nav class="mobile-nav">
+      <a href="../index.html">Home</a>
+      <a href="../contact.html">Contact</a>
+      <a href="cart.html" class="cart-link">
+        Cart <span id="cart-count-mobile" class="cart-count">0</span>
+      </a>
+      <button onclick="window.location.href='pages/login.html'">Login</button>
+    </nav>
+  </header>
+  <div class="container">
+    <i class="fas fa-check-circle"></i>
+    <h1>Order Placed</h1>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
