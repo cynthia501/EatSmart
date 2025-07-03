@@ -91,7 +91,7 @@
   </style>
 </head>
 <body>
-  <header>
+ <header>
     <h1><a href="index.html">EatSmart</a></h1>
 
     <button class="hamburger"><i class="fas fa-bars"></i></button>
@@ -106,7 +106,15 @@
       <a href="pages/cart.html" class="cart-link">
         Cart <span id="cart-count" class="cart-count">0</span>
       </a>
-      <button onclick="window.location.href='pages/login.html'">Login</button>
+      <div style="position: relative;">
+        <div id="loginTitle" style="display: flex; gap: 1rem;">
+          <p>Login</p>
+          <i class="fa-solid fa-caret-down" id="iconhidden"></i>
+        </div>
+        <p id="logout" style="position: absolute; right: -0.5rem; top: 1.5rem; background-color: white; padding: 0.5rem; border-radius: 2px; box-shadow: 1px 1px 1px 1px black;">Logout</p>
+      </div>
+
+    
     </nav>
 
     <nav class="mobile-nav">
@@ -143,7 +151,7 @@
   <footer>
     <p>&copy; 2025 EatSmart. All rights reserved.</p>
   </footer>
-
+  <script src="script.js"></script>
   <script>
     function sendWhatsApp() {
       const name = document.getElementById('name').value.trim();
