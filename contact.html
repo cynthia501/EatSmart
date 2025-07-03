@@ -27,7 +27,7 @@
       display: flex;
       justify-content: space-between;
       gap: 4rem;
-      padding: 4rem 6rem;
+      padding: 4rem 1rem;
     }
 
     .contact-info {
@@ -157,9 +157,9 @@
 
       const phoneNumber = '2348104167071';
       const encodedMessage = encodeURIComponent(
-        `Hello EatSmart, My Name: ${name} 
-        Email: ${email} 
-        Message: ${message}`
+      `Hello EatSmart, My Name: ${name} 
+      Email: ${email} 
+      Message: ${message}`
       );
 
       const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
