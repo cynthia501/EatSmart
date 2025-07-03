@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EatSmart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">EatSmart</a></h1>
+
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <nav class="desktop-nav">
+      <a href="contact.html">Contact</a>
+      <a href="pages/cart.html" class="cart-link">
+        Cart <span id="cart-count" class="cart-count">0</span>
+      </a>
+      <div style="position: relative;">
+        <div id="loginTitle" style="display: flex; gap: 1rem;">
+          <p>Login</p>
+          <i class="fa-solid fa-caret-down" id="iconhidden"></i>
+        </div>
+        <p id="logout" style="position: absolute; right: -0.5rem; top: 1.5rem; background-color: white; padding: 0.5rem; border-radius: 2px; box-shadow: 1px 1px 1px 1px black;">Logout</p>
+      </div>
+
+    
+    </nav>
+
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="pages/cart.html" class="cart-link">
+        Cart <span id="cart-count-mobile" class="cart-count">0</span>
+      </a>
+      <button onclick="window.location.href='pages/login.html'">Login</button>
+    </nav>
+  </header>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="container">
+      <div class="image-slider">
+        <div class="slide"><img src="assets/1fe9448049ceabf191bd976001234713.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="assets/5b2826fe14b39b7995dfcee9d88b67b4.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="assets/dce43d36656e9e2eebd98d3dd9e45468.jpg" alt="Slide 3"></div>
+      </div>
+      <div class="text-cont">
+        <div class="text">
+          <h2>Delicious Homemade Pastries</h2>
+          <p>Made with the finest ingredients for a delightful treat.</p>
+          <button ><a style="text-decoration: none; color: white;" href="#fea">Order Now</a></button>
+          
+        </div>
+      </div>
+    </section>
+
+    <section  id="fea" class="aboutcont">
+      <div class="About">
+        <h2>About Us</h2>
+        <p>We're a family-owned bakery dedicated to crafting fresh, wholesome pastries with love and care.</p>
+      </div>
+    </section>
+
+    <section class="featured">
+      <h2>Featured Pastries</h2>
+      <div class="grid-container">
+        <div>
+          <img src="assets/6310b6c8e0f782f279326fe8dec72954.jpg" alt="Meat Pie">
+          <h3>Meat Pie</h3>
+          <p>A flaky pastry filled with seasoned minced meat, potatoes, and vegetables.</p>
+          <button class="add-to-cart"
+            data-name="Meat Pie"
+            data-price="10.00"
+            data-image="assets/6310b6c8e0f782f279326fe8dec72954.jpg">
+            Add to Cart
+          </button>
+        </div>
+        <div>
+          <img src="assets/cc83d81336d19316d96f888d6e17091b.jpg" alt="Vanilla Cake">
+          <h3>Vanilla Cake</h3>
+          <p>A soft, moist cake with classic vanilla flavor — perfect for birthdays or teatime.</p>
+          <button class="add-to-cart"
+            data-name="Vanilla Cake"
+            data-price="12.00"
+            data-image="assets/cc83d81336d19316d96f888d6e17091b.jpg">
+            Add to Cart
+          </button>
+        </div>
+        <div>
+          <img src="assets/4d5288fd964ca9ae49706acbab4b600e.jpg" alt="Cake Parfait">
+          <h3>Cake Parfait</h3>
+          <p>Layers of moist cake, creamy frosting, and fruit or syrup — rich and indulgent.</p>
+          <button class="add-to-cart"
+            data-name="Cake Parfait"
+            data-price="8.00"
+            data-image="assets/4d5288fd964ca9ae49706acbab4b600e.jpg">
+            Add to Cart
+          </button>
+        </div>
+        <div>
+          <img src="assets/563ec7fc601f83f7e58b3e69dfb8cbd8.jpg" alt="Doughnut">
+          <h3>Doughnut</h3>
+          <p>A sweet, soft, deep-fried pastry glazed with sugar or chocolate — perfect for a snack.</p>
+          <button class="add-to-cart"
+            data-name="Doughnut"
+            data-price="6.00"
+            data-image="assets/563ec7fc601f83f7e58b3e69dfb8cbd8.jpg">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu">
+      <h3>Our Menu</h3>
+      <p>Explore our collection of Homemade products</p>
+      <button>View Menu</button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 EatSmart Bakery. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module">
+  const name = localStorage.getItem("displayName");
+  const loginButton = document.getElementById("loginTitle");
+  const iconHidden = document.getElementById("iconhidden");
+  const logOut = document.getElementById("logout");
+
+  if (name && loginButton) {
+    loginButton.innerHTML = `<p>Hi, ${name}</p> <i class="fa-solid fa-caret-down" id="iconhidden"></i>`;
+    const newIconHidden = loginButton.querySelector("#iconhidden");
+
+      // Only the caret shows/hides logout
+      newIconHidden.addEventListener("click", (e) => {
+        e.stopPropagation();
+        logOut.classList.toggle("active");
+      });
+
+      // Optionally: make whole box do nothing
+      loginButton.style.cursor = "pointer";
+    } else {
+      // If not logged in, clicking anywhere goes to login page
+      loginButton.addEventListener("click", () => {
+        window.location.href = 'pages/login.html';
+      });
+    }
+
+    logOut.addEventListener("click", () => {
+      localStorage.removeItem("displayName");
+      window.location.reload();
+    });
+</script>
+
+
+</body>
+</html>
