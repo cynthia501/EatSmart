@@ -223,7 +223,10 @@ nav.mobile-nav.show {
 
 .About {
   text-align: center;
-  max-width: 600px;
+  font-size: 18px;
+}
+.About p {
+  margin-top: 1rem ;
 }
 
 .featured {
@@ -270,6 +273,7 @@ nav.mobile-nav.show {
 
 .menu p{
   padding: .8rem 1.5rem;
+   font-size: 18px;
 }
 
 footer {
