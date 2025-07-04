@@ -264,16 +264,12 @@ nav.mobile-nav.show {
 
 .menu {
   text-align: center;
-  margin: 3rem;
+  margin-bottom: 3rem;
+ 
 }
 
-.menu button {
-  background-color: #4e342e;
-  color: #fdfaf6;
-  border: none;
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  cursor: pointer;
+.menu p{
+  padding: .8rem 1.5rem;
 }
 
 footer {
